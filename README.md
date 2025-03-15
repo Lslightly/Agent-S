@@ -93,9 +93,7 @@ git clone https://github.com/simular-ai/Agent-S.git
 
 Install the gui-agents package:
 ```
-uv venv
-uv pip install -r requirements.txt
-# uv pip install --reinstall .
+pipx install gui-agents # without venv or conda env
 ```
 
 Set your LLM API Keys and other environment variables. You can do this by adding the following line to your .bashrc (Linux), or .zshrc (MacOS) file. 
