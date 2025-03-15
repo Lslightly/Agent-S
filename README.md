@@ -93,7 +93,9 @@ git clone https://github.com/simular-ai/Agent-S.git
 
 Install the gui-agents package:
 ```
-pip install gui-agents
+uv venv
+uv pip install -r requirements.txt
+# uv pip install --reinstall .
 ```
 
 Set your LLM API Keys and other environment variables. You can do this by adding the following line to your .bashrc (Linux), or .zshrc (MacOS) file. 
@@ -110,6 +112,8 @@ Alternatively, you can set the environment variable in your Python script:
 import os
 os.environ["OPENAI_API_KEY"] = "<YOUR_API_KEY>"
 ```
+
+Or add .env by copying [.env.example](./.env.example)
 
 We also support Azure OpenAI, Anthropic, and vLLM inference. For more information refer to [models.md](models.md).
 
@@ -152,6 +156,13 @@ For a more detailed setup and usage guide, please refer to the [Perplexica Repos
 
 
 ### CLI
+
+> S2 is not tested yet
+
+Windows(.venv activated):
+```
+agent_s1.exe --model <model name>
+```
 
 Run Agent S2 with a specific model (default is `gpt-4o`):
 

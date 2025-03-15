@@ -255,6 +255,10 @@ def main():
         if response.lower() != "y":
             break
 
+from dotenv import load_dotenv
+load_dotenv(os.path.join(os.path.dirname(__file__), "../../.env"))
+print(os.environ['OPENAI_API_KEY'])
+# print(os.environ.get("OPENAI_BASE_URL"))
 
 if __name__ == "__main__":
     main()

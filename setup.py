@@ -42,8 +42,9 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'agent_s1=gui_agents.v1.cli_app:main',
-            'agent_s2=gui_agents.v2.cli_app:main'
+            # s1/v1(s2/v2), v1(v2) cause ModuleNotFoundError: No module named 'gui_agents.v1'
+            'agent_s1=gui_agents.s1.cli_app:main',
+            'agent_s2=gui_agents.s2.cli_app:main'
         ],
     },
      classifiers=[
